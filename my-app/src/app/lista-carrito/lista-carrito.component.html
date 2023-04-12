@@ -1,0 +1,29 @@
+<div *ngFor="let item for items">
+
+{{item.nombre}} | {{item.precio}} | cantodad: {{item.cantidad}}
+<span><a routerLink='/'><i class="material-icons">delete</i></a></span>
+
+
+</div>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+
+  <div>
+      <label for="nombre">
+        Nombre
+      </label>
+      <input id="nombre" type="text" formControlName="nombrecito">
+  </div>
+  <div>
+    <label for="correo">
+      Correo
+    </label>
+    <input id="correo" type="text" formControlName="email">
+</div>
+
+
+  <button class="button" type="submit">Enviar</button>
+</form>
+
+
+
